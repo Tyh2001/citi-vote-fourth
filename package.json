@@ -1,0 +1,25 @@
+{
+  "name": "citi-vote",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "amfe-flexible": "^2.2.1",
+    "axios": "^0.24.0",
+    "echarts": "^5.2.2",
+    "qs": "^6.10.1",
+    "tyh-ui2": "^2.0.2",
+    "vant": "^3.2.8",
+    "vue": "^3.2.16",
+    "vue-router": "^4.0.12",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.9.3",
+    "postcss-pxtorem": "^5.1.1",
+    "vite": "^2.6.4"
+  }
+}
