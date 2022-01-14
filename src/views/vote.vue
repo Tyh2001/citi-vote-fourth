@@ -1,46 +1,44 @@
 <template>
-  <div>
-    <Bar />
-    <div class="vote_box">
-      <ul class="title">
-        <li>Every one has 1 vote</li>
-        <li style="margin-top: 5px">
-          Please click "vote" at the bottom to submit your votes
-        </li>
-      </ul>
-      <div class="user_list">
-        <div class="user_item" v-for="(user, index) in users" :key="index">
-          <img class="crown" src="@/images/crown.png" />
-          <img
-            class="user_photo"
-            :src="`https://infinitymcn.com/citi/citi-vote-fourth/user/${user.url}.jpg`"
-          />
-          <p class="user_name">
-            <van-checkbox-group
-              v-model="checked_user"
-              direction="horizontal"
-              :max="1"
-              :disabled="checkboxDisabled"
-            >
-              <van-checkbox icon-size="13px" :name="index" shape="square">
-                {{ user.name }}
-              </van-checkbox>
-            </van-checkbox-group>
-          </p>
-        </div>
+  <Bar />
+  <div class="vote_box">
+    <ul class="title">
+      <li>Every one has 1 vote</li>
+      <li style="margin-top: 5px">
+        Please click "vote" at the bottom to submit your votes
+      </li>
+    </ul>
+    <div class="user_list">
+      <div class="user_item" v-for="(user, index) in users" :key="index">
+        <img class="crown" src="@/images/crown.png" />
+        <img
+          class="user_photo"
+          :src="`https://infinitymcn.com/citi/citi-vote-fourth/user/${user.url}.jpg`"
+        />
+        <p class="user_name">
+          <van-checkbox-group
+            v-model="checked_user"
+            direction="horizontal"
+            :max="1"
+            :disabled="checkboxDisabled"
+          >
+            <van-checkbox icon-size="13px" :name="index" shape="square">
+              {{ user.name }}
+            </van-checkbox>
+          </van-checkbox-group>
+        </p>
       </div>
-
-      <p class="change_btn">
-        <tyh-button
-          type="primary"
-          class="btn_VOTE"
-          :disabled="voteLoading"
-          @click="onVOTEClick"
-        >
-          VOTE
-        </tyh-button>
-      </p>
     </div>
+
+    <p class="change_btn">
+      <tyh-button
+        type="primary"
+        class="btn_VOTE"
+        :disabled="voteLoading"
+        @click="onVOTEClick"
+      >
+        VOTE
+      </tyh-button>
+    </p>
   </div>
 </template>
 
@@ -128,11 +126,13 @@ async function onVOTEClick () {
   position: absolute;
   z-index: 20;
   width: 50%;
-  top: -30px;
+  top: -20px;
   right: 0px;
 }
 .vote_box .user_list .user_item .user_photo {
   width: 52%;
+  height: 52%;
+  object-fit: cover;
   border: 2px solid rgb(224, 159, 29);
   border-radius: 5px;
 }
@@ -141,6 +141,7 @@ async function onVOTEClick () {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  width: 87px;
 }
 .change_btn {
   text-align: center;

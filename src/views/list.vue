@@ -1,11 +1,9 @@
 <template>
-  <div>
-    <Bar />
-    <div id="main"></div>
-    <p class="back">
-      <button class="btn_BACK" @click="pushBACK">Refresh</button>
-    </p>
-  </div>
+  <Bar />
+  <div id="main"></div>
+  <p class="back">
+    <button class="btn_BACK" @click="pushBACK">Refresh</button>
+  </p>
 </template>
 
 <script setup>
