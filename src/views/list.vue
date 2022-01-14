@@ -33,6 +33,8 @@ function BubblingSort (arr) {
 async function loadgetVoteResults () {
   const { data } = await getVoteResults()
 
+  console.log(data)
+
   const usersList = BubblingSort(data)
 
   const EchartsNum = []
