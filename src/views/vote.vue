@@ -1,44 +1,46 @@
 <template>
-  <Bar />
-  <div class="vote_box">
-    <ul class="title">
-      <li>Every one has 1 vote</li>
-      <li style="margin-top: 5px">
-        Please click "vote" at the bottom to submit your votes
-      </li>
-    </ul>
-    <div class="user_list">
-      <div class="user_item" v-for="(user, index) in users" :key="index">
-        <img class="crown" src="@/images/crown.png" />
-        <img
-          class="user_photo"
-          :src="`https://infinitymcn.com/citi/citi-vote-next/user/${user.url}.JPG`"
-        />
-        <p class="user_name">
-          <van-checkbox-group
-            v-model="checked_user"
-            direction="horizontal"
-            :max="1"
-            :disabled="checkboxDisabled"
-          >
-            <van-checkbox icon-size="13px" :name="index" shape="square">
-              {{ user.name }}
-            </van-checkbox>
-          </van-checkbox-group>
-        </p>
+  <div>
+    <Bar />
+    <div class="vote_box">
+      <ul class="title">
+        <li>Every one has 1 vote</li>
+        <li style="margin-top: 5px">
+          Please click "vote" at the bottom to submit your votes
+        </li>
+      </ul>
+      <div class="user_list">
+        <div class="user_item" v-for="(user, index) in users" :key="index">
+          <img class="crown" src="@/images/crown.png" />
+          <img
+            class="user_photo"
+            :src="`https://infinitymcn.com/citi/citi-vote-fourth/user/${user.url}.jpg`"
+          />
+          <p class="user_name">
+            <van-checkbox-group
+              v-model="checked_user"
+              direction="horizontal"
+              :max="1"
+              :disabled="checkboxDisabled"
+            >
+              <van-checkbox icon-size="13px" :name="index" shape="square">
+                {{ user.name }}
+              </van-checkbox>
+            </van-checkbox-group>
+          </p>
+        </div>
       </div>
-    </div>
 
-    <p class="change_btn">
-      <tyh-button
-        type="primary"
-        class="btn_VOTE"
-        :disabled="voteLoading"
-        @click="onVOTEClick"
-      >
-        VOTE
-      </tyh-button>
-    </p>
+      <p class="change_btn">
+        <tyh-button
+          type="primary"
+          class="btn_VOTE"
+          :disabled="voteLoading"
+          @click="onVOTEClick"
+        >
+          VOTE
+        </tyh-button>
+      </p>
+    </div>
   </div>
 </template>
 

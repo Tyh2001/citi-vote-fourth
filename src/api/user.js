@@ -8,7 +8,7 @@ import require from '@/utils/require'
 export const onLogin = data => {
   return require({
     method: 'POST',
-    url: '/index/Votethird/onLogin',
+    url: '/index/Votetfourth/onLogin',
     data
   })
 }
@@ -21,7 +21,7 @@ export const onLogin = data => {
 export const onChangeVote = data => {
   return require({
     method: 'POST',
-    url: '/index/Votethird/onVote',
+    url: '/index/Votetfourth/onVote',
     data
   })
 }
@@ -33,6 +33,6 @@ export const onChangeVote = data => {
 export const getVoteResults = () => {
   return require({
     method: 'GET',
-    url: '/index/Votethird/getVoteRes'
+    url: '/index/Votetfourth/getVoteRes'
   })
 }

@@ -1,30 +1,24 @@
 <template>
-  <Bar />
-  <div class="home_box">
-    <!-- <van-field v-model="SOEID" placeholder="PLEASE ENTER YOUR SOEID" /> -->
-    <tyh-input
-      size="large"
-      v-model="SOEID"
-      placeholder="PLEASE ENTER YOUR SOEID"
-    />
+  <div>
+    <Bar />
+    <div class="home_box">
+      <!-- <van-field v-model="SOEID" placeholder="PLEASE ENTER YOUR SOEID" /> -->
+      <tyh-input
+        size="large"
+        v-model="SOEID"
+        placeholder="PLEASE ENTER YOUR SOEID"
+      />
 
-    <tyh-button
-      :disabled="btndisabled"
-      class="onLogin"
-      type="primary"
-      @click="change"
-    >
-      ENTER
-    </tyh-button>
-    <!-- <van-button
-      :disabled="btndisabled"
-      class="onLogin"
-      type="primary"
-      @click="change"
-    >
-      ENTER
-    </van-button> -->
-    <img class="banner" src="@/images/banner.png" />
+      <tyh-button
+        :disabled="btndisabled"
+        class="onLogin"
+        type="primary"
+        @click="change"
+      >
+        ENTER
+      </tyh-button>
+      <img class="banner" src="@/images/banner.png" />
+    </div>
   </div>
 </template>
 
