@@ -14,18 +14,18 @@
           class="user_photo"
           :src="`https://infinitymcn.com/citi/citi-vote-fourth/user/${user.url}.jpg`"
         />
-        <p class="user_name">
-          <van-checkbox-group
-            v-model="checked_user"
-            direction="horizontal"
-            :max="1"
-            :disabled="checkboxDisabled"
-          >
-            <van-checkbox icon-size="13px" :name="index" shape="square">
-              {{ user.name }}
-            </van-checkbox>
-          </van-checkbox-group>
-        </p>
+
+        <!-- 用户 -->
+        <van-checkbox-group
+          v-model="checked_user"
+          direction="horizontal"
+          :max="1"
+          :disabled="checkboxDisabled"
+        >
+          <van-checkbox icon-size="13px" :name="index" shape="square">
+            <div class="user_name">{{ user.name }}</div>
+          </van-checkbox>
+        </van-checkbox-group>
       </div>
     </div>
 
@@ -138,10 +138,14 @@ async function onVOTEClick () {
 }
 .vote_box .user_list .user_item .user_name {
   font-size: 9px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  width: 87px;
+  width: 50px;
+  height: 40px;
+  word-break: break-all;
+  text-align: center;
+}
+.van-checkbox__label {
+  display: flex;
+  flex-wrap: wrap;
 }
 .change_btn {
   text-align: center;
