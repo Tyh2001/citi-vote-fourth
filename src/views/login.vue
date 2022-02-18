@@ -34,6 +34,7 @@ const router = useRouter()
 const store = useStore()
 
 async function change () {
+  // 如果为空
   if (SOEID.value === '') {
     Toast('Please enter SOEID')
     return
@@ -45,8 +46,13 @@ async function change () {
   })
   btndisabled.value = true
 
-  const { data } = await onLogin(qs.stringify({ SOEID: SOEID.value, time: toDates(Date.parse(new Date())) }))
+  const { data } = await onLogin(qs.stringify({
+    SOEID: SOEID.value,
+    time: toDates(Date.parse(new Date()))
+  }))
+
   console.log(data)
+
   if (data.code === 201) {
     Toast(data.msg)
     btndisabled.value = false
@@ -55,6 +61,7 @@ async function change () {
     return
   } else if (data.code === 301) {
     router.push('/list')
+    Toast(data.msg)
     btndisabled.value = false
     return
   }

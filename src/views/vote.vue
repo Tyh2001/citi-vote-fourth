@@ -76,6 +76,7 @@ async function onVOTEClick () {
       time: toDates(Date.parse(new Date())) // 投票时间
     }
   ))
+  console.log(data)
 
   // 成功
   if (data.code === 201) {
@@ -91,6 +92,7 @@ async function onVOTEClick () {
 
   // 打印错误信息
   Toast(data.msg)
+  router.push('/')
   voteLoading.value = false
 }
 </script>
