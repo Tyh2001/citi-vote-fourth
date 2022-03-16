@@ -51,8 +51,6 @@ async function change () {
     time: toDates(Date.parse(new Date()))
   }))
 
-  // console.log(data)
-
   if (data.code === 201) {
     Toast(data.msg)
     btndisabled.value = false
