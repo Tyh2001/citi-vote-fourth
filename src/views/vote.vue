@@ -76,7 +76,7 @@ async function onVOTEClick () {
       time: toDates(Date.parse(new Date())) // 投票时间
     }
   ))
-  console.log(data)
+  // console.log(data)
 
   // 成功
   if (data.code === 201) {

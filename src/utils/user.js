@@ -35,9 +35,9 @@ const user = [
   { name: 'Tina_Song_TTLC', url: 'Tina_Song_TTLC' },
   { name: 'Ting_Ou_TTLC', url: 'Ting_Ou_TTLC' },
   { name: 'Vera_Zeng_GSG', url: 'Vera_Zeng_GSG' },
-  { name: 'Wendy_Wang_GSG', url: 'Wendy_Wang_GSG' },
+  // { name: 'Wendy_Wang_GSG', url: 'Wendy_Wang_GSG' },
   { name: 'Xinxin_Wang_Pool RA', url: 'Xinxin_Wang_Pool RA' },
-  { name: 'Yaning_Zhang_TTLC', url: 'Yaning_Zhang_TTLC' },
+  // { name: 'Yaning_Zhang_TTLC', url: 'Yaning_Zhang_TTLC' },
   { name: 'Yuting_Zhu_TTLC', url: 'Yuting_Zhu_TTLC' },
 ]
 
